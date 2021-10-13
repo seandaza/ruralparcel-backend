@@ -18,10 +18,14 @@ const territoryRouter = require('./routers/territoryRouter');
 const cors =require('cors');
 
 
+
 class Server{
     constructor(){
         const objconectarBD=new conectarBD();
         this.app.use(cors());
+        app.use ({
+            origin: 'https://www.section.io'
+        }));
         this.app = express();
         //Se llama el metodo config para levantar el servidor
         this.config();
