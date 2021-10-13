@@ -21,8 +21,8 @@ const cors =require('cors');
 class Server{
     constructor(){
         const objconectarBD=new conectarBD();
-        this.app = express();
         this.app.use(cors());
+        this.app = express();
         //Se llama el metodo config para levantar el servidor
         this.config();
      
